@@ -1,0 +1,398 @@
+{
+  "1": [
+    {
+      "SIGLA": "",
+      "DISCIPLINA": "Humanidades 1",
+      "TPEI": "3-0-0-4"
+    },
+    {
+      "SIGLA": "BCS0001-15",
+      "DISCIPLINA": "Base Experimental das Ciências Naturais",
+      "TPEI": "0-3-0-2"
+    },
+    {
+      "SIGLA": "BIK0102-15",
+      "DISCIPLINA": "Estrutura da Matéria",
+      "TPEI": "3-0-0-4"
+    },
+    {
+      "SIGLA": "BIS0003-15",
+      "DISCIPLINA": "Bases Matemáticas",
+      "TPEI": "4-0-0-5"
+    },
+    {
+      "SIGLA": "BIL0304-15",
+      "DISCIPLINA": "Evolução e Diversificação da Vida na Terra",
+      "TPEI": "3-0-0-4"
+    },
+    {
+      "SIGLA": "BIS0005-15",
+      "DISCIPLINA": "Bases Computacionais da Ciência",
+      "TPEI": "0-2-0-2"
+    }
+  ],
+  "2": [
+    {
+      "SIGLA": "BCM0504-15",
+      "DISCIPLINA": "Natureza da Informação",
+      "TPEI": "3-0-0-4",
+      "RECOMENDACAO": "2"
+    },
+    {
+      "SIGLA": "BCJ0204-15",
+      "DISCIPLINA": "Fenômenos Mecânicos",
+      "TPEI": "4-1-0-6",
+      "RECOMENDACAO": "2"
+    },
+    {
+      "SIGLA": "BCN0402-15",
+      "DISCIPLINA": "Funções de uma Variável",
+      "TPEI": "4-0-0-6",
+      "RECOMENDACAO": "2"
+    },
+    {
+      "SIGLA": "BCN0404-15",
+      "DISCIPLINA": "Geometria Analítica",
+      "TPEI": "3-0-0-6",
+      "RECOMENDACAO": "2"
+    },
+    {
+      "SIGLA": "BCL0306-15",
+      "DISCIPLINA": "Biodiversidade: Interações entre Organismos e Ambiente",
+      "TPEI": "3-0-0-4",
+      "RECOMENDACAO": "2"
+    }
+  ],
+  "3": [
+    {
+      "SIGLA": "BCM0505-22",
+      "DISCIPLINA": "Processamento da Informação",
+      "TPEI": "0-4-0-4",
+      "RECOMENDACAO": "3"
+    },
+    {
+      "SIGLA": "BCJ0205-15",
+      "DISCIPLINA": "Fenômenos Térmicos",
+      "TPEI": "3-1-0-4",
+      "RECOMENDACAO": "3"
+    },
+    {
+      "SIGLA": "BCN0407-15",
+      "DISCIPLINA": "Funções de Várias Variáveis",
+      "TPEI": "4-0-0-6",
+      "RECOMENDACAO": "3"
+    },
+    {
+      "SIGLA": "BCL0307-15",
+      "DISCIPLINA": "Transformações Químicas",
+      "TPEI": "3-2-0-6",
+      "RECOMENDACAO": "3"
+    }
+  ],
+  "4": [
+    {
+      "SIGLA": "BCM0506-15",
+      "DISCIPLINA": "Comunicação e Redes",
+      "TPEI": "3-0-0-4",
+      "RECOMENDACAO": "4"
+    },
+    {
+      "SIGLA": "BCJ0203-15",
+      "DISCIPLINA": "Fenômenos Eletromagnéticos",
+      "TPEI": "4-1-0-6",
+      "RECOMENDACAO": "4"
+    },
+    {
+      "SIGLA": "BCN0405-15",
+      "DISCIPLINA": "Introdução às Equações Diferenciais Ordinárias",
+      "TPEI": "4-0-0-4",
+      "RECOMENDACAO": "4"
+    },
+    {
+      "SIGLA": "BIN0406-15",
+      "DISCIPLINA": "Introdução à Probabilidade e à Estatística",
+      "TPEI": "3-0-0-4",
+      "RECOMENDACAO": "4"
+    },
+    {
+      "SIGLA": "MCBM006-23",
+      "DISCIPLINA": "Matemática Discreta",
+      "TPEI": "4-0-0-4",
+      "RECOMENDACAO": "4"
+    }
+  ],
+  "5": [
+    {
+      "SIGLA": "",
+      "DISCIPLINA": "Humanidades 2",
+      "TPEI": "3-0-0-4",
+      "RECOMENDACAO": "5"
+    },
+    {
+      "SIGLA": "BCL0308-15",
+      "DISCIPLINA": "Bioquímica: Estrutura, Propriedade e Funções de Biomoléculas",
+      "TPEI": "3-2-0-6",
+      "RECOMENDACAO": "5"
+    },
+    {
+      "SIGLA": "BCK0103-15",
+      "DISCIPLINA": "Física Quântica",
+      "TPEI": "3-0-0-4",
+      "RECOMENDACAO": "5"
+    },
+    {
+      "SIGLA": "MCTA028-15",
+      "DISCIPLINA": "Programação Estruturada",
+      "TPEI": "2-2-0-4",
+      "RECOMENDACAO": "5"
+    },
+    {
+      "SIGLA": "",
+      "DISCIPLINA": "Livre",
+      "TPEI": "4 créditos",
+      "RECOMENDACAO": "5"
+    }
+  ],
+  "6": [
+    {
+      "SIGLA": "",
+      "DISCIPLINA": "Humanidades 3",
+      "TPEI": "3-0-0-4",
+      "RECOMENDACAO": "6"
+    },
+    {
+      "SIGLA": "MCTA006-17",
+      "DISCIPLINA": "Circuitos Digitais",
+      "TPEI": "3-1-0-4",
+      "RECOMENDACAO": "6"
+    },
+    {
+      "SIGLA": "MCTB001-17",
+      "DISCIPLINA": "Álgebra Linear",
+      "TPEI": "6-0-0-5",
+      "RECOMENDACAO": "6"
+    },
+    {
+      "SIGLA": "MCCC001-23",
+      "DISCIPLINA": "Algoritmos e Estruturas de Dados I",
+      "TPEI": "2-2-0-6",
+      "RECOMENDACAO": "6"
+    }
+  ],
+  "7": [
+    {
+      "SIGLA": "MCTA018-13",
+      "DISCIPLINA": "Programação Orientada a Objetos",
+      "TPEI": "2-2-0-4",
+      "RECOMENDACAO": "7"
+    },
+    {
+      "SIGLA": "MCTA024-13",
+      "DISCIPLINA": "Sistemas Digitais",
+      "TPEI": "2-2-0-4",
+      "RECOMENDACAO": "7"
+    },
+    {
+      "SIGLA": "MCCC010-23",
+      "DISCIPLINA": "Matemática Discreta II",
+      "TPEI": "4-0-0-4",
+      "RECOMENDACAO": "7"
+    },
+    {
+      "SIGLA": "MCCC002-23",
+      "DISCIPLINA": "Algoritmos e Estruturas de Dados II",
+      "TPEI": "4-0-0-6",
+      "RECOMENDACAO": "7"
+    }
+  ],
+  "8": [
+    {
+      "SIGLA": "",
+      "DISCIPLINA": "Opção Limitada",
+      "TPEI": "4 créditos",
+      "RECOMENDACAO": "8"
+    },
+    {
+      "SIGLA": "MCTA004-17",
+      "DISCIPLINA": "Arquitetura de Computadores",
+      "TPEI": "4-0-0-4",
+      "RECOMENDACAO": "8"
+    },
+    {
+      "SIGLA": "MCCC008-23",
+      "DISCIPLINA": "Inteligência Artificial",
+      "TPEI": "4-0-0-4",
+      "RECOMENDACAO": "8"
+    },
+    {
+      "SIGLA": "MCCC003-23",
+      "DISCIPLINA": "Algoritmos em Grafos",
+      "TPEI": "4-0-0-4",
+      "RECOMENDACAO": "8"
+    }
+  ],
+  "9": [
+    {
+      "SIGLA": "",
+      "DISCIPLINA": "Opção Limitada",
+      "TPEI": "4 créditos",
+      "RECOMENDACAO": "9"
+    },
+    {
+      "SIGLA": "MCTA022-17",
+      "DISCIPLINA": "Redes de Computadores",
+      "TPEI": "3-1-0-4",
+      "RECOMENDACAO": "9"
+    },
+    {
+      "SIGLA": "MCTA033-15",
+      "DISCIPLINA": "Engenharia de Software",
+      "TPEI": "4-0-0-4",
+      "RECOMENDACAO": "9"
+    },
+    {
+      "SIGLA": "MCCC004-23",
+      "DISCIPLINA": "Análise de Algoritmos I",
+      "TPEI": "4-0-0-4",
+      "RECOMENDACAO": "9"
+    },
+    {
+      "SIGLA": "BCS0002-15",
+      "DISCIPLINA": "Projeto Dirigido",
+      "TPEI": "0-2-0-10",
+      "RECOMENDACAO": "9"
+    }
+  ],
+  "10": [
+    {
+      "SIGLA": "",
+      "DISCIPLINA": "Opção Limitada",
+      "TPEI": "4 créditos",
+      "RECOMENDACAO": "10"
+    },
+    {
+      "SIGLA": "MCTA009-13",
+      "DISCIPLINA": "Computadores, Ética e Sociedade",
+      "TPEI": "2-0-0-4",
+      "RECOMENDACAO": "10"
+    },
+    {
+      "SIGLA": "MCCC015-23",
+      "DISCIPLINA": "Programação Funcional",
+      "TPEI": "4-0-0-4",
+      "RECOMENDACAO": "10"
+    },
+    {
+      "SIGLA": "MCCC005-23",
+      "DISCIPLINA": "Análise de Algoritmos II",
+      "TPEI": "4-0-0-4",
+      "RECOMENDACAO": "10"
+    },
+    {
+      "SIGLA": "",
+      "DISCIPLINA": "Livre",
+      "TPEI": "4 créditos",
+      "RECOMENDACAO": "10"
+    }
+  ],
+  "11": [
+    {
+      "SIGLA": "",
+      "DISCIPLINA": "Opção Limitada",
+      "TPEI": "4 créditos",
+      "RECOMENDACAO": "11"
+    },
+    {
+      "SIGLA": "MCCC012-23",
+      "DISCIPLINA": "Modelagem de Banco de Dados",
+      "TPEI": "4-0-0-4",
+      "RECOMENDACAO": "11"
+    },
+    {
+      "SIGLA": "MCCC007-23",
+      "DISCIPLINA": "Computação Gráfica",
+      "TPEI": "0-4-0-4",
+      "RECOMENDACAO": "11"
+    },
+    {
+      "SIGLA": "MCZA008-17",
+      "DISCIPLINA": "Interação Humano-Computador",
+      "TPEI": "4-0-0-4",
+      "RECOMENDACAO": "11"
+    }
+  ],
+  "12": [
+    {
+      "SIGLA": "",
+      "DISCIPLINA": "Opção Limitada",
+      "TPEI": "4 créditos",
+      "RECOMENDACAO": "12"
+    },
+    {
+      "SIGLA": "MCCC011-23",
+      "DISCIPLINA": "Metodologia e Escrita Científica p/ Computação",
+      "TPEI": "2-0-0-2",
+      "RECOMENDACAO": "12"
+    },
+    {
+      "SIGLA": "MCTA026-13",
+      "DISCIPLINA": "Sistemas Operacionais",
+      "TPEI": "3-1-0-4",
+      "RECOMENDACAO": "12"
+    },
+    {
+      "SIGLA": "MCCC009-23",
+      "DISCIPLINA": "Linguagens Formais e Autômatos",
+      "TPEI": "4-0-0-4",
+      "RECOMENDACAO": "12"
+    }
+  ],
+  "13": [
+    {
+      "SIGLA": "",
+      "DISCIPLINA": "Opção Limitada",
+      "TPEI": "4 créditos",
+      "RECOMENDACAO": "13"
+    },
+    {
+      "SIGLA": "MCCC006-23",
+      "DISCIPLINA": "Compiladores e Interpretadores",
+      "TPEI": "4-0-0-4",
+      "RECOMENDACAO": "13"
+    }
+  ],
+  "14": [
+    {
+      "SIGLA": "",
+      "DISCIPLINA": "Livre",
+      "TPEI": "4 créditos",
+      "RECOMENDACAO": "14"
+    },
+    {
+      "SIGLA": "MCTA025-13",
+      "DISCIPLINA": "Sistemas Distribuídos",
+      "TPEI": "3-1-0-4",
+      "RECOMENDACAO": "14"
+    }
+  ],
+  "15": [
+    {
+      "SIGLA": "",
+      "DISCIPLINA": "Livre",
+      "TPEI": "4 créditos",
+      "RECOMENDACAO": "15"
+    },
+    {
+      "SIGLA": "MCTA023-17",
+      "DISCIPLINA": "Segurança de Dados",
+      "TPEI": "3-1-0-4",
+      "RECOMENDACAO": "15"
+    },
+    {
+      "SIGLA": "",
+      "DISCIPLINA": "Trabalho de Conclusão de Curso em Ciência da Computação",
+      "TPEI": "12-0-0-12",
+      "RECOMENDACAO": "15"
+    }
+  ]
+}

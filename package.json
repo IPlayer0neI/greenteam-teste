@@ -6,11 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db": "json-server --watch db.json --port 3001",
+    "generate_db": "node generate-db.js"
   },
   "dependencies": {
+    "json-server": "^1.0.0-beta.3",
+    "next": "15.2.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.2.2"
+    "react-dom": "^19.0.0"
   }
 }

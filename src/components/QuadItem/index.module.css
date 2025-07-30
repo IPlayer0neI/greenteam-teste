@@ -1,0 +1,29 @@
+.quadSubjectTitle {
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tag {
+    border: 1px solid #e0e0e0;
+    padding: 3px 10px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 0;
+    border-radius: 20px;
+}
+
+.quadSubject {
+    padding: 10px;
+    background-color: #F9F9F9;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.tpei {
+    color: #999999;
+    line-height: 30px;
+}

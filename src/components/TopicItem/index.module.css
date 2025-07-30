@@ -1,0 +1,38 @@
+.topicItem {
+  margin-bottom: 5px;
+}
+
+.itemLink {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.itemLink:hover {
+  background-color: var(--gray-200);
+}
+
+.itemLink span {
+  margin-right: 10px;
+  font-size: 0.5rem;
+}
+
+.activeLink {
+  background-color: black !important;
+  color: white;
+  font-weight: 600;
+}
+
+.activeNavLink .itemIcon {
+  color: white;
+}

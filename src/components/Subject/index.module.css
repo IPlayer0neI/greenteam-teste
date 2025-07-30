@@ -1,0 +1,88 @@
+.subject {
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+.subjectTitle {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.tags {
+    margin: 15px 0px;
+}
+
+.tag {
+    border: 1px solid #e0e0e0;
+    padding: 3px 10px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 0;
+    border-radius: 20px;
+}
+
+.green {
+    background-color: var(--green-100);
+    color: var(--green-200);
+    border: none;
+}
+
+.tpei {
+    color: #999999;
+}
+
+.description {
+    padding: 20px 0px;
+}
+
+.detail {
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.gray {
+    background-color: #e0e0e0;
+}
+
+.detailTitle svg {
+    margin-right: 10px;
+}
+
+.detailTitle {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.detailParagraph {
+    padding: 10px 0;
+}
+
+.detailList {
+    list-style: inside;
+    font-size: 0.9rem;
+    color: #999999;
+}
+
+.bibliografia {
+    display: flex;
+    gap: 25px;
+}
+
+.textBold {
+    font-weight: 600;
+}
+
+.line {
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    margin: 10px 0px;
+}
