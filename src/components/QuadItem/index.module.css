@@ -27,3 +27,10 @@
     color: #999999;
     line-height: 30px;
 }
+
+.recommendation {
+    font-size: 0.9em;
+    color: #FF8C00;
+    margin: 0;
+    font-weight: bold;
+}

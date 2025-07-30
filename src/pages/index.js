@@ -46,11 +46,30 @@ export default function Home() {
                     return subject
                   })
 
-                const quadIdeal = quadIdealRaw.map(function(quad){
-                  
-                })
+                const quadIdeal = []
 
-                console.log(subjects)
+                for (let i = 1; i <= 15; i++) {
+                  const quad = quadIdealRaw[i]
+
+                  quad.map(function (subject) {
+                    if (subject.SIGLA === "") {
+                      subject.RECOMENDACAO = ""
+                      return subject
+                    }
+
+                    const item = subjects.find(function (subjectRaw) {
+                      return subjectRaw.SIGLA == subject.SIGLA
+                    }) || { RECOMENDACAO: "" }
+
+                    subject.RECOMENDACAO = item.RECOMENDACAO
+                    return subject
+                  })
+
+                  quadIdeal.push(
+                    quad
+                  )
+                }
+
                 setSubjects(subjects)
                 setSubject(subjects[0])
                 setQuadideal(quadIdeal)
@@ -73,7 +92,7 @@ export default function Home() {
 
       {
         active == "quadIdeal" ? (
-          <QuadIdeal />
+          <QuadIdeal quadIdeal={quadIdeal}/>
         ) : ""
       }
     </div>

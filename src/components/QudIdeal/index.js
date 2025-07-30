@@ -2,12 +2,10 @@ import { Quad } from "../Quad"
 import styles from "./index.module.css"
 
 export function QuadIdeal({ quadIdeal }) {
-    const subjectsList = []
 
-    for(let i = 0; i <= 15; i++){
-        subjectsList.push(
-            <Quad quad={i} quadSubjects={quadIdeal[i]}/>
-        )
+    console.log(quadIdeal)
+    if(!quadIdeal){
+        return ""
     }
 
     return (
@@ -18,7 +16,11 @@ export function QuadIdeal({ quadIdeal }) {
                     Recomendação por Quadrimestre
                 </h1>
             </div>
-            {subjectsList}
+            {
+                quadIdeal.map(function(quadSubjects, index){
+                    return <Quad quad={index + 1} quadSubjects={quadSubjects}/>
+                })
+            }
         </div>
     )
 }
