@@ -4,8 +4,8 @@ import styles from "./index.module.css"
 
 export function SubjectList({ subjects, search, subject, setSubject }) {
     const filterSubjects = subjects
-        .filter(function (subject) {
-            return subject.DISCIPLINA.toLowerCase().includes(search.toLowerCase())
+        .filter(function (sub) {
+            return sub.DISCIPLINA.toLowerCase().includes(search.toLowerCase())
         });
 
     return (
@@ -20,12 +20,12 @@ export function SubjectList({ subjects, search, subject, setSubject }) {
                     filterSubjects.map(function (subjectItem) {
                         const active = subject && subjectItem.SIGLA == subject.SIGLA
 
-                        function handleClick(){
+                        function handleClick() {
                             setSubject(subjectItem);
                         }
-
+                        
                         return (
-                            <SubjectItem handleClick={handleClick} title={subjectItem.DISCIPLINA} active={active} acronym={subjectItem.SIGLA} tpei={subjectItem.TPEI} course={subjectItem.CATEGORIA[0]} key={subjectItem.SIGLA} />
+                            <SubjectItem handleClick={handleClick} active={active} subjectItem={subjectItem} />
                         )
                     })
                 }

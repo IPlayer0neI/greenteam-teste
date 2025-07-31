@@ -2,8 +2,6 @@ import { Quad } from "../Quad"
 import styles from "./index.module.css"
 
 export function QuadIdeal({ quadIdeal }) {
-
-    console.log(quadIdeal)
     if(!quadIdeal){
         return ""
     }

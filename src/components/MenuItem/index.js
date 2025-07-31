@@ -1,6 +1,6 @@
 import styles from "./index.module.css"
 
-export function MenuTopic({ title, children }) {
+export function MenuItem({ title, children }) {
     return (
         <li>
             <h1 className={styles.menuTopicTitle}>

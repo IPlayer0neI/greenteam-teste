@@ -20,9 +20,8 @@ export function Quad({ quad, quadSubjects }) {
             <ul className={styles.quadmaterials}>
                 {
                     quadSubjects.map(function(subject){
-                        console.log(subject)
                         return (
-                            <QuadItem title={subject.DISCIPLINA} key={subject.SIGLA} tpei={subject.TPEI} acronym={subject.SIGLA} recommendation={subject.RECOMENDACAO} />
+                            <QuadItem subject={subject} key={subject.SIGLA}/>
                         )
                     })
                 }

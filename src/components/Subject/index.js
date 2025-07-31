@@ -4,7 +4,7 @@ export function Subject({ subject }) {
     if (!subject) {
         return ""
     }
-    
+
     return (
         <div className={styles.subject}>
             <div className={styles.subjectTop}>
@@ -20,7 +20,7 @@ export function Subject({ subject }) {
                     </div>
                 </div>
                 <div className={styles.tpei}>
-                    TPEI {subject.TPEI}
+                    TPEI: {subject.TPEI}
                 </div>
             </div>
             <div className={styles.description}>
@@ -48,10 +48,10 @@ export function Subject({ subject }) {
                         Cursos
                     </h4>
                     <div className={styles.detailParagraph}>
-                        <div className={styles.tags}>
+                        <div>
                             {
                                 subject.CATEGORIA.map(function (categoria) {
-                                    if(!categoria){
+                                    if (!categoria) {
                                         return ""
                                     }
 
@@ -65,19 +65,14 @@ export function Subject({ subject }) {
                         </div>
                     </div>
                 </div>
-                <div className={styles.bibliografia}>
+                <div className={styles.bibliography}>
                     <div className={styles.detail}>
                         <h4 className={styles.detailTitle}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><path d="M16 3.128a4 4 0 0 1 0 7.744" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><circle cx="9" cy="7" r="4" /></svg>
                             Bibliografia Básica
                         </h4>
-                        <div className={styles.detailParagraph}>
-                            <ul className={styles.detailList}>
-                                {/* <li>
-                                    VUOLO, josé henrique fundamentos da teoria de erros 2. ed São Paulo BLucher 1996
-                                </li> */}
-                               {subject.BIBLIOGRAFIA_BASICA}
-                            </ul>
+                        <div className={`${styles.detailParagraph} ${styles.bibliographyList}`}>
+                            {subject.BIBLIOGRAFIA_BASICA}
                         </div>
                     </div>
                     <div className={styles.detail}>
@@ -85,10 +80,8 @@ export function Subject({ subject }) {
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><path d="M16 3.128a4 4 0 0 1 0 7.744" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><circle cx="9" cy="7" r="4" /></svg>
                             Bibliografia Complementar
                         </h4>
-                        <div className={styles.detailParagraph}>
-                            <ul className={styles.detailList}>
-                                {subject.BIBLIOGRAFIA_COMPLEMENTAR}
-                            </ul>
+                        <div className={`${styles.detailParagraph} ${styles.bibliographyList}`}>
+                            {subject.BIBLIOGRAFIA_COMPLEMENTAR}
                         </div>
                     </div>
                 </div>

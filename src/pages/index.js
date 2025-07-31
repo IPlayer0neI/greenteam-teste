@@ -1,25 +1,23 @@
 import { SubjectList } from "@/components/SubjectList";
-import { Navigation } from "@/components/NavigationMenu";
+import { Navigation } from "@/components/Navigation";
 import { QuadIdeal } from "@/components/QudIdeal";
 import { Subject } from "@/components/Subject";
 import styles from "@/styles/Home.module.css";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [active, setActive] = useState("subject")
+  const [page, setPage] = useState("subject")
   const [search, setSearch] = useState("")
   const [subject, setSubject] = useState()
   const [subjects, setSubjects] = useState([])
+  const [subjectsBCT, setSubjectsBCT] = useState([])
+  const [subjectsBCC, setSubjectsBCC] = useState([])
   const [quadIdeal, setQuadideal] = useState([])
-
-  useState(function () {
-
-  }, [])
 
   useEffect(function () {
     fetch("http://localhost:3001/categorias")
       .then((res) => res.json())
-      .then(function (category) {
+      .then(function (categories) {
         fetch("http://localhost:3001/catalogo")
           .then((res) => res.json())
           .then(function (catalog) {
@@ -27,23 +25,24 @@ export default function Home() {
               .then((res) => res.json())
               .then(function (quadIdealRaw) {
                 const subjects = catalog
-                  .filter(function (subject) {
-                    return !(subject.SIGLA === "")
+                  .filter(function (sub) {
+                    return !(sub.SIGLA === "")
                   })
-                  .map(function (subject) {
-                    if (subject.SIGLA === "") {
-                      subject.CATEGORIA = []
-                      return subject
+                  .map(function (sub) {
+                    if (sub.SIGLA === "") {
+                      sub.CATEGORIA = []
+                      return sub
                     }
-                    const categoryItem = category.find(function (item) {
-                      return item.SIGLA === subject.SIGLA
+                    const category = categories.find(function (item) {
+                      return item.SIGLA === sub.SIGLA
                     })
 
-                    subject.CATEGORIA = categoryItem.CATEGORIA.split(";")
+                    sub.CATEGORIA = category.CATEGORIA.split(";")
                       .map(function (word) {
                         return word.split(" ")[0]
                       })
-                    return subject
+
+                    return sub
                   })
 
                 const quadIdeal = []
@@ -51,23 +50,21 @@ export default function Home() {
                 for (let i = 1; i <= 15; i++) {
                   const quad = quadIdealRaw[i]
 
-                  quad.map(function (subject) {
-                    if (subject.SIGLA === "") {
-                      subject.RECOMENDACAO = ""
-                      return subject
+                  quad.map(function (sub) {
+                    if (sub.SIGLA === "") {
+                      sub.RECOMENDACAO = ""
+                      return sub
                     }
 
                     const item = subjects.find(function (subjectRaw) {
-                      return subjectRaw.SIGLA == subject.SIGLA
+                      return subjectRaw.SIGLA == sub.SIGLA
                     }) || { RECOMENDACAO: "" }
 
-                    subject.RECOMENDACAO = item.RECOMENDACAO
-                    return subject
+                    sub.RECOMENDACAO = item.RECOMENDACAO
+                    return sub
                   })
 
-                  quadIdeal.push(
-                    quad
-                  )
+                  quadIdeal.push(quad)
                 }
 
                 setSubjects(subjects)
@@ -76,23 +73,70 @@ export default function Home() {
               })
           })
       })
-  }, [active])
+  }, [])
+
+  useEffect(function () {
+    const newSubjectsBCC = subjects.filter(function (sub) {
+      return sub.CATEGORIA.find(function (category) {
+        return category == "BCC"
+      })
+    })
+
+    setSubjectsBCC(newSubjectsBCC)
+  }, [subjects])
+
+  useEffect(function () {
+    const newSubjectsBCT = subjects.filter(function (sub) {
+      return sub.CATEGORIA.find(function (category) {
+        return category == "BC&T"
+      })
+    })
+
+    setSubjectsBCT(newSubjectsBCT)
+  }, [subjects])
 
   return (
     <div className={styles.home}>
-      <Navigation active={active} setActive={setActive} search={search} setSearch={setSearch} />
+      <Navigation
+        page={page}
+        setPage={setPage}
+        search={search} setSearch={setSearch}
+      />
       {
-        active == "subject" ? (
+        page == "subject" ? (
           <>
             <SubjectList subjects={subjects} search={search} subject={subject} setSubject={setSubject} />
             <Subject subject={subject} />
           </>
         ) : ""
       }
-
       {
-        active == "quadIdeal" ? (
-          <QuadIdeal quadIdeal={quadIdeal}/>
+        page == "quadIdeal" ? (
+          <QuadIdeal quadIdeal={quadIdeal} />
+        ) : ""
+      }
+      {
+        page == "todas" ? (
+          <>
+            <SubjectList subjects={subjects} search={search} subject={subject} setSubject={setSubject} />
+            <Subject subject={subject} />
+          </>
+        ) : ""
+      }
+      {
+        page == "BC&T" ? (
+          <>
+            <SubjectList subjects={subjectsBCT} search={search} subject={subject} setSubject={setSubject} />
+            <Subject subject={subject} />
+          </>
+        ) : ""
+      }
+      {
+        page == "BCC" ? (
+          <>
+            <SubjectList subjects={subjectsBCC} search={search} subject={subject} setSubject={setSubject} />
+            <Subject subject={subject} />
+          </>
         ) : ""
       }
     </div>

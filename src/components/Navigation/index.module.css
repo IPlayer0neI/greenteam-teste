@@ -58,13 +58,13 @@
 }
 
 .searchButton svg {
-  color: #999;
+  color: var(--gray-400);
   width: 18px;
   height: 18px;
 }
 
 .search::placeholder {
-  color: #999;
+  color: var(--gray-400);
   font-size: 0.9rem;
   font-weight: 200;
 }
@@ -77,6 +77,3 @@
 .menu {
   padding: 15px 20px;
 }
-
-
-

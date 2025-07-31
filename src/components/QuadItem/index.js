@@ -1,25 +1,25 @@
 import styles from "./index.module.css"
 
-export function QuadItem({ title, acronym, tpei, recommendation }) {
+export function QuadItem({ subject }) {
     return (
         <li className={styles.quadSubject}>
             <div className={styles.quadSubjectTitle}>
-                {title}
+                {subject.DISCIPLINA}
                 {
-                    acronym === "" ? "" :
+                    subject.SIGLA === "" ? "" :
                         <div className={styles.tag}>
-                            {acronym}
+                            {subject.SIGLA}
                         </div>
                 }
             </div>
             <div className={styles.tpei}>
-                TPEI {tpei}
+                TPEI {subject.TPEI}
             </div>
             <div className={styles.recommendation}>
                 {
-                recommendation === ""? 
-                ""
-                :`Recomendação: ${recommendation}`
+                    subject.RECOMENDACAO === "" ?
+                        ""
+                        : `Recomendação: ${subject.RECOMENDACAO}`
                 }
             </div>
         </li>
