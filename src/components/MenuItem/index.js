@@ -1,4 +1,4 @@
-import styles from "./index.module.css"
+import styles from "./index.module.css";
 
 export function MenuItem({ title, children }) {
     return (
@@ -10,5 +10,5 @@ export function MenuItem({ title, children }) {
                 {children}
             </ul>
         </li>
-    )
+    );
 }

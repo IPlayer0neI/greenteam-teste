@@ -15,7 +15,8 @@
   position: relative;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis; 
+  color: black
 }
 
 .itemLink:hover {

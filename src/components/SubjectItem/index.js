@@ -1,4 +1,4 @@
-import styles from "./index.module.css"
+import styles from "./index.module.css";
 
 export function SubjectItem({ subjectItem, active, handleClick }) {
     return (
@@ -14,5 +14,5 @@ export function SubjectItem({ subjectItem, active, handleClick }) {
                 TPEI: {subjectItem.TPEI}
             </div>
         </div>
-    )
+    );
 }

@@ -1,10 +1,10 @@
-import styles from "./index.module.css"
-import { QuadItem } from "../QuadItem"
+import styles from "./index.module.css";
+import { QuadItem } from "../QuadItem";
 
 export function Quad({ quad, quadSubjects }) {
 
     if(!quadSubjects){
-        return ""
+        return "";
     }
 
     return (
@@ -27,5 +27,5 @@ export function Quad({ quad, quadSubjects }) {
                 }
             </ul>
         </div>
-    )
+    );
 }

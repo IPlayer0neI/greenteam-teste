@@ -1,11 +1,7 @@
-import { Quad } from "../Quad"
-import styles from "./index.module.css"
+import { Quad } from "../Quad";
+import styles from "./index.module.css";
 
-export function QuadIdeal({ quadIdeal }) {
-    if(!quadIdeal){
-        return ""
-    }
-
+export function Ideal({ quadIdeal }) {
     return (
         <div className={styles.quadIdeal}>
             <div className={styles.quadIdealTop}>
@@ -15,10 +11,10 @@ export function QuadIdeal({ quadIdeal }) {
                 </h1>
             </div>
             {
-                quadIdeal.map(function(quadSubjects, index){
-                    return <Quad quad={index + 1} quadSubjects={quadSubjects}/>
+                quadIdeal.map(function (quadSubjects, index) {
+                    return <Quad quad={index + 1} quadSubjects={quadSubjects} />
                 })
             }
         </div>
-    )
+    );
 }

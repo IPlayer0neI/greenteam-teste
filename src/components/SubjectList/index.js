@@ -1,6 +1,5 @@
-import { SubjectItem } from "../SubjectItem"
-import styles from "./index.module.css"
-
+import { SubjectItem } from "../SubjectItem";
+import styles from "./index.module.css";
 
 export function SubjectList({ subjects, search, subject, setSubject }) {
     const filterSubjects = subjects
@@ -23,7 +22,7 @@ export function SubjectList({ subjects, search, subject, setSubject }) {
                         function handleClick() {
                             setSubject(subjectItem);
                         }
-                        
+
                         return (
                             <SubjectItem handleClick={handleClick} active={active} subjectItem={subjectItem} />
                         )
@@ -31,5 +30,5 @@ export function SubjectList({ subjects, search, subject, setSubject }) {
                 }
             </div>
         </aside>
-    )
+    );
 }

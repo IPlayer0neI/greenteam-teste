@@ -1,11 +1,13 @@
-import styles from "./index.module.css"
+import Link from "next/link";
+import styles from "./index.module.css";
 
-export function TopicItem({ children, isActive, onClick }) {
+export function TopicItem({ children, pathname, href }) {
+    const active = pathname === href;
     return (
-        <li className={styles.topicItem} onClick={onClick}>
-            <a className={`${styles.itemLink} ${isActive ? styles.activeLink : ""}`}>
+        <li className={styles.topicItem}>
+            <Link href={href} className={`${styles.itemLink} ${active ? styles.activeLink : ""}`}>
                 {children}
-            </a>
+            </Link>
         </li>
-    )
+    );
 }

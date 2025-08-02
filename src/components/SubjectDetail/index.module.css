@@ -1,0 +1,43 @@
+.detail {
+    width: 100%;
+    border: 1px solid var(--gray-100);
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+
+.detailTitle svg {
+    margin-right: 10px;
+}
+
+.detailTitle {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.detailParagraph {
+    padding: 10px 0;
+}
+
+.bibliography {
+    display: flex;
+    gap: 25px;
+}
+
+.gray {
+    font-size: 0.9rem;
+    color: #999999;
+}
+
+.textBold {
+    font-weight: 600;
+}
+
+.line {
+    width: 100%;
+    border-bottom: 1px solid var(--gray-100);
+    margin: 10px 0px;
+}

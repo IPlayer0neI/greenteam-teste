@@ -1,4 +1,4 @@
-import styles from "./index.module.css"
+import styles from "./index.module.css";
 
 export function QuadItem({ subject }) {
     return (
@@ -23,5 +23,5 @@ export function QuadItem({ subject }) {
                 }
             </div>
         </li>
-    )
+    );
 }

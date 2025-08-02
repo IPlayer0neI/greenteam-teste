@@ -1,50 +1,50 @@
 export function mixResponses(categories, catalog, quadIdealRaw) {
     function filterEmptySIGLA(subject) {
-        return !(subject.SIGLA === "")
+        return !(subject.SIGLA === "");
     }
 
     function takeSIGLA(subject) {
         if (subject.SIGLA === "") {
-            subject.CATEGORIA = []
-            return subject
+            subject.CATEGORIA = [];
+            return subject;
         }
 
         const category = categories.find(function (category) {
-            return category.SIGLA === subject.SIGLA
+            return category.SIGLA === subject.SIGLA;
         })
 
         subject.CATEGORIA = category.CATEGORIA.split(";")
             .map(function (word) {
-                return word.split(" ")[0]
+                return word.split(" ")[0];
             })
 
-        return subject
+        return subject;
     }
 
     const subjects = catalog
         .filter(filterEmptySIGLA)
-        .map(takeSIGLA)
+        .map(takeSIGLA);
 
     function takeRECOMENDACAO(subject) {
         if (subject.SIGLA === "") {
-            subject.RECOMENDACAO = ""
-            return subject
+            subject.RECOMENDACAO = "";
+            return subject;
         }
 
         const item = subjects.find(function (subjectRaw) {
-            return subjectRaw.SIGLA == subject.SIGLA
+            return subjectRaw.SIGLA == subject.SIGLA;
         }) || { RECOMENDACAO: "" }
 
-        subject.RECOMENDACAO = item.RECOMENDACAO
-        return subject
+        subject.RECOMENDACAO = item.RECOMENDACAO;
+        return subject;
     }
 
-    const quadIdeal = []
+    const quadIdeal = [];
 
     for (let i = 1; i <= 15; i++) {
-        let quad = quadIdealRaw[i]
+        let quad = quadIdealRaw[i];
 
-        quad = quad.map(takeRECOMENDACAO)
+        quad = quad.map(takeRECOMENDACAO);
 
         quadIdeal.push(quad)
     }

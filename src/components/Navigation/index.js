@@ -1,14 +1,10 @@
-import { useCallback } from "react"
-import styles from "./index.module.css"
-import { MenuItem } from "../MenuItem"
-import { TopicItem } from "../TopicItem"
+import styles from "./index.module.css";
+import { MenuItem } from "../MenuItem";
+import { TopicItem } from "../TopicItem";
+import { usePathname } from "next/navigation";
 
-export function Navigation({ search, setSearch, page, setPage }) {
-    const link = useCallback(function (type) {
-        return function () {
-            setPage(type)
-        }
-    }, [setPage])
+export function Navigation({ search, setSearch }) {
+    const pathname = usePathname();
 
     function handleChange(event) {
         setSearch(event.target.value)
@@ -33,13 +29,13 @@ export function Navigation({ search, setSearch, page, setPage }) {
             </div>
             <ul className={styles.menu}>
                 <MenuItem title="NAVEGAÇÃO">
-                    <TopicItem isActive={page == "subject"} onClick={link("subject")}>
+                    <TopicItem pathname={pathname} href={"/"}>
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open-icon lucide-book-open"><path d="M12 7v14" /><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" /></svg>
                         </span>
                         Matérias
                     </TopicItem>
-                    <TopicItem isActive={page == "quadIdeal"} onClick={link("quadIdeal")}>
+                    <TopicItem pathname={pathname} href={"/quadideal"}>
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-icon lucide-calendar"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /></svg>
                         </span>
@@ -47,19 +43,19 @@ export function Navigation({ search, setSearch, page, setPage }) {
                     </TopicItem>
                 </MenuItem>
                 <MenuItem title="CATEGORIAS">
-                    <TopicItem isActive={page == "todas"} onClick={link("todas")}>
+                    <TopicItem pathname={pathname} href={"/todasasmaterias"}>
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-grid3x3-icon lucide-grid-3x3"><rect width="18" height="18" x="3" y="3" rx="2" /><path d="M3 9h18" /><path d="M3 15h18" /><path d="M9 3v18" /><path d="M15 3v18" /></svg>
                         </span>
                         Todas as Matérias
                     </TopicItem>
-                    <TopicItem isActive={page == "BC&T"} onClick={link("BC&T")}>
+                    <TopicItem pathname={pathname} href={"/bc&t"}>
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu-icon lucide-cpu"><path d="M12 20v2" /><path d="M12 2v2" /><path d="M17 20v2" /><path d="M17 2v2" /><path d="M2 12h2" /><path d="M2 17h2" /><path d="M2 7h2" /><path d="M20 12h2" /><path d="M20 17h2" /><path d="M20 7h2" /><path d="M7 20v2" /><path d="M7 2v2" /><rect x="4" y="4" width="16" height="16" rx="2" /><rect x="8" y="8" width="8" height="8" rx="1" /></svg>
                         </span>
                         Ciência e Tecnologia
                     </TopicItem>
-                    <TopicItem isActive={page == "BCC"} onClick={link("BCC")}>
+                    <TopicItem pathname={pathname} href={"/bcc"}>
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-icon lucide-code"><path d="m16 18 6-6-6-6" /><path d="m8 6-6 6 6 6" /></svg>
                         </span>
@@ -68,5 +64,5 @@ export function Navigation({ search, setSearch, page, setPage }) {
                 </MenuItem>
             </ul >
         </nav >
-    )
+    );
 }
