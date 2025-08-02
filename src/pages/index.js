@@ -3,7 +3,8 @@ import { Navigation } from "@/components/Navigation";
 import { QuadIdeal } from "@/components/QudIdeal";
 import { Subject } from "@/components/Subject";
 import styles from "@/styles/Home.module.css";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { mixResponses } from "@/filters/mixResponses";
 
 export default function Home() {
   const [page, setPage] = useState("subject")
@@ -24,48 +25,7 @@ export default function Home() {
             fetch("http://localhost:3001/quadideal")
               .then((res) => res.json())
               .then(function (quadIdealRaw) {
-                const subjects = catalog
-                  .filter(function (sub) {
-                    return !(sub.SIGLA === "")
-                  })
-                  .map(function (sub) {
-                    if (sub.SIGLA === "") {
-                      sub.CATEGORIA = []
-                      return sub
-                    }
-                    const category = categories.find(function (item) {
-                      return item.SIGLA === sub.SIGLA
-                    })
-
-                    sub.CATEGORIA = category.CATEGORIA.split(";")
-                      .map(function (word) {
-                        return word.split(" ")[0]
-                      })
-
-                    return sub
-                  })
-
-                const quadIdeal = []
-
-                for (let i = 1; i <= 15; i++) {
-                  const quad = quadIdealRaw[i]
-
-                  quad.map(function (sub) {
-                    if (sub.SIGLA === "") {
-                      sub.RECOMENDACAO = ""
-                      return sub
-                    }
-
-                    const item = subjects.find(function (subjectRaw) {
-                      return subjectRaw.SIGLA == sub.SIGLA
-                    }) || { RECOMENDACAO: "" }
-
-                    sub.RECOMENDACAO = item.RECOMENDACAO
-                    return sub
-                  })
-
-                  quadIdeal.push(quad)
-                }
+                const { subjects, quadIdeal } = mixResponses(categories, catalog, quadIdealRaw)
 
                 setSubjects(subjects)
                 setSubject(subjects[0])
@@ -75,22 +35,22 @@ export default function Home() {
       })
   }, [])
 
-  useEffect(function () {
-    const newSubjectsBCC = subjects.filter(function (sub) {
+  const filterSubjects = useCallback(function (query) {
+    return subjects.filter(function (sub) {
       return sub.CATEGORIA.find(function (category) {
-        return category == "BCC"
+        return category == query
       })
     })
+  }, [subjects])
+
+  useEffect(function () {
+    const newSubjectsBCC = filterSubjects("BCC")
 
     setSubjectsBCC(newSubjectsBCC)
   }, [subjects])
 
   useEffect(function () {
-    const newSubjectsBCT = subjects.filter(function (sub) {
-      return sub.CATEGORIA.find(function (category) {
-        return category == "BC&T"
-      })
-    })
+    const newSubjectsBCT = filterSubjects("BC&T")
 
     setSubjectsBCT(newSubjectsBCT)
   }, [subjects])

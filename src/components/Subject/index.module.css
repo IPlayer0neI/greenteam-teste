@@ -32,7 +32,7 @@
 }
 
 .tpei {
-    color: #999999;
+    color: var(--gray-400);
 }
 
 .description {

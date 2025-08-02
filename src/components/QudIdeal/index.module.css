@@ -19,7 +19,7 @@
 .quadIdealTitle svg {
     width: 20px;
     margin-right: 7px;
-    color: #007bff;
+    color: var(--blue-100)
 }
 
 .container {   

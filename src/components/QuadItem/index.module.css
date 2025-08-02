@@ -5,7 +5,7 @@
 }
 
 .tag {
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--gray-100);
     padding: 3px 10px;
     font-size: 0.8rem;
     font-weight: 500;
@@ -18,7 +18,7 @@
 
 .quadSubject {
     padding: 10px;
-    background-color: #F9F9F9;
+    background-color: var(--gray-200);
     border-radius: 5px;
     margin-bottom: 10px;
 }
@@ -30,7 +30,7 @@
 
 .recommendation {
     font-size: 0.9em;
-    color: #FF8C00;
+    color: var(--orange-100);
     margin: 0;
     font-weight: bold;
 }
