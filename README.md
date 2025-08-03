@@ -14,7 +14,7 @@ npm run generate_db
 e depois num terminal separado no mesmo diretório no qual você vai rodar o aplicativo use
 
 ```bash
-npm run 
+npm run db
 ```
 
 ## Getting Started
