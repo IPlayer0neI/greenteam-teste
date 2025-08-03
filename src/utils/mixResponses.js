@@ -3,7 +3,7 @@ export function mixResponses(categories, catalog, quadIdealRaw) {
         return !(subject.SIGLA === "");
     }
 
-    function takeSIGLA(subject) {
+    function getCoursAcronyms(subject) {
         if (subject.SIGLA === "") {
             subject.CATEGORIA = [];
             return subject;
@@ -23,7 +23,7 @@ export function mixResponses(categories, catalog, quadIdealRaw) {
 
     const subjects = catalog
         .filter(filterEmptySIGLA)
-        .map(takeSIGLA);
+        .map(getCoursAcronyms);
 
     function takeRECOMENDACAO(subject) {
         if (subject.SIGLA === "") {
