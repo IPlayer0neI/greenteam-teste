@@ -1,5 +1,22 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
+## Avisos
+antes de rodar o aplicativo com 
+
+```bash
+npm run dev
+```
+certifique-se de usa este comando para gerar o banco de dados
+
+```bash
+npm run generate_db
+```
+e depois num terminal separado no mesmo diretório no qual você vai rodar o aplicativo use
+
+```bash
+npm run 
+```
+
 ## Getting Started
 
 First, run the development server:
